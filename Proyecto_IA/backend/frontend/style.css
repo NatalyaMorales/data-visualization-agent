@@ -1,0 +1,373 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: #f5f7fb;
+  color: #222;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input[type="file"],
+input[type="number"],
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+button {
+  background: #1f6feb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 14px;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+
+button:hover {
+  background: #1859bc;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  background: #111827;
+}
+
+.secondary-btn:hover {
+  background: #000000;
+}
+
+.report-btn {
+  background: #0f766e;
+}
+
+.report-btn:hover {
+  background: #0b5e58;
+}
+
+.checkbox-group label {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  margin-top: 16px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: #eef3ff;
+}
+
+.role-select {
+  min-width: 160px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #eef3ff;
+  border-radius: 999px;
+  font-size: 12px;
+}
+
+.action-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+}
+
+.action-row button {
+  width: auto;
+  min-width: 240px;
+}
+
+.filters-wrap {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.filter-label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.excel-filter-block {
+  position: relative;
+}
+
+.excel-filter {
+  position: relative;
+}
+
+.excel-filter-btn {
+  width: 100%;
+  margin-top: 0;
+  background: white;
+  color: #222;
+  border: 1px solid #cfd4dc;
+  text-align: left;
+  padding-right: 38px;
+  position: relative;
+}
+
+.excel-filter-btn:hover {
+  background: #f8fafc;
+}
+
+.excel-filter-btn::after {
+  content: "▾";
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #444;
+  font-size: 14px;
+}
+
+.excel-filter-panel {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #cfd4dc;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  z-index: 50;
+  padding: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.excel-filter-search {
+  width: 100%;
+  border: 1px solid #d7dbe2;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.excel-filter-actions {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.mini-btn {
+  width: auto;
+  margin-top: 0;
+  padding: 7px 10px;
+  font-size: 13px;
+  background: #1f6feb;
+  border-radius: 8px;
+}
+
+.mini-btn-light {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.mini-btn-light:hover {
+  background: #d1d5db;
+}
+
+.excel-filter-options {
+  max-height: 220px;
+  overflow-y: auto;
+  border: 1px solid #eceff3;
+  border-radius: 8px;
+  padding: 6px;
+}
+
+.excel-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 4px;
+  font-weight: normal;
+  margin: 0;
+  cursor: pointer;
+}
+
+.excel-option input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+}
+
+#recommendations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 14px;
+}
+
+.recommendation-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 12px 14px;
+  background: #fafafa;
+  min-height: 140px;
+}
+
+.recommendation-card.selected {
+  border: 2px solid #1f6feb;
+  background: #eef4ff;
+}
+
+.recommendation-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.recommendation-title {
+  margin: 0;
+  font-size: 18px;
+}
+
+.recommendation-picker {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.recommendation-picker input[type="checkbox"] {
+  width: auto;
+  margin: 0;
+  transform: scale(1.1);
+}
+
+.disabled-picker {
+  opacity: 0.65;
+}
+
+.recommendation-card p {
+  margin: 6px 0;
+  line-height: 1.35;
+}
+
+.recommendation-columns {
+  font-weight: 600;
+}
+
+.recommendation-note {
+  color: #4b5563;
+  font-size: 14px;
+}
+
+.empty-state {
+  color: #555;
+  padding: 8px 0;
+}
+
+.dashboard-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.dashboard-footer .secondary-btn,
+.dashboard-footer .report-btn {
+  width: auto;
+  min-width: 210px;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .action-row {
+    justify-content: stretch;
+  }
+
+  .action-row button {
+    width: 100%;
+  }
+
+  #recommendations,
+  .filters-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-footer {
+    justify-content: stretch;
+    flex-direction: column;
+  }
+
+  .dashboard-footer .secondary-btn,
+  .dashboard-footer .report-btn {
+    width: 100%;
+  }
+}

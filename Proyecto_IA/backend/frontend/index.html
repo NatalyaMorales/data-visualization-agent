@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agente de Perfilado y Recomendación Visual</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Agente de Perfilado y Recomendación Visual</h1>
+    <p class="subtitle">
+      Sube un CSV, revisa columnas, ajusta reglas y genera recomendaciones visuales.
+    </p>
+
+    <section class="card">
+      <h2>1. Cargar dataset</h2>
+
+      <div class="grid">
+        <div>
+          <label for="fileInput">Archivo CSV</label>
+          <input type="file" id="fileInput" accept=".csv" />
+        </div>
+
+        <div>
+          <label for="separator">Separador</label>
+          <select id="separator">
+            <option value=",">Coma (,)</option>
+            <option value=";">Punto y coma (;)</option>
+            <option value="TAB">Tab</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="encoding">Encoding</label>
+          <select id="encoding">
+            <option value="utf-8">utf-8</option>
+            <option value="latin-1">latin-1</option>
+            <option value="cp1252">cp1252</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>2. Configuración</h2>
+
+      <div class="grid">
+        <div>
+          <label for="audience">Audiencia</label>
+          <select id="audience">
+            <option value="no_tecnica">No técnica</option>
+            <option value="tecnica">Técnica</option>
+            <option value="ejecutiva">Ejecutiva</option>
+          </select>
+        </div>
+
+        <div class="checkbox-group">
+          <label><input type="checkbox" id="removeHighNullCols" /> Eliminar columnas con muchos nulos</label>
+          <label><input type="checkbox" id="skipNullRemoval" checked /> Omitir tratamiento de nulos</label>
+        </div>
+
+        <div>
+          <label for="nullThreshold">Umbral de nulos (%)</label>
+          <input type="number" id="nullThreshold" value="40" min="0" max="100" />
+        </div>
+
+        <div>
+          <label for="nullStrategy">Tratamiento de nulos</label>
+          <select id="nullStrategy">
+            <option value="eliminar_filas">Eliminar filas con nulos</option>
+            <option value="imputar">Imputar media/moda</option>
+          </select>
+        </div>
+      </div>
+
+      <button id="profileBtn">Perfilar dataset</button>
+    </section>
+
+    <section class="card">
+      <h2>3. Perfil de columnas</h2>
+      <div id="summary"></div>
+      <div id="profileContainer"></div>
+
+      <div class="action-row">
+        <button id="processBtn">Generar Recomendaciones</button>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>4. Recomendaciones visuales</h2>
+
+      <div class="filters-wrap">
+        <div class="excel-filter-block">
+          <label class="filter-label">Mostrar visualizaciones que contengan la(s) columna(s)</label>
+          <div class="excel-filter">
+            <button type="button" id="includeFilterBtn" class="excel-filter-btn">
+              Seleccionar columnas
+            </button>
+
+            <div id="includeFilterPanel" class="excel-filter-panel hidden">
+              <input
+                type="text"
+                id="includeFilterSearch"
+                class="excel-filter-search"
+                placeholder="Buscar"
+              />
+
+              <div class="excel-filter-actions">
+                <button type="button" id="includeSelectAllBtn" class="mini-btn">Seleccionar todo</button>
+                <button type="button" id="includeClearBtn" class="mini-btn mini-btn-light">Limpiar</button>
+              </div>
+
+              <div id="includeFilterOptions" class="excel-filter-options"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="excel-filter-block">
+          <label class="filter-label">Tipo de gráfico</label>
+          <div class="excel-filter">
+            <button type="button" id="chartTypeFilterBtn" class="excel-filter-btn">
+              Seleccionar tipos
+            </button>
+
+            <div id="chartTypeFilterPanel" class="excel-filter-panel hidden">
+              <input
+                type="text"
+                id="chartTypeFilterSearch"
+                class="excel-filter-search"
+                placeholder="Buscar"
+              />
+
+              <div class="excel-filter-actions">
+                <button type="button" id="chartTypeSelectAllBtn" class="mini-btn">Seleccionar todo</button>
+                <button type="button" id="chartTypeClearBtn" class="mini-btn mini-btn-light">Limpiar</button>
+              </div>
+
+              <div id="chartTypeFilterOptions" class="excel-filter-options"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="recommendations"></div>
+
+      <div class="dashboard-footer">
+        <button id="dashboardBtn" class="secondary-btn" type="button">Generar dashboard</button>
+        <button id="reportBtn" class="report-btn" type="button">Generar reporte</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

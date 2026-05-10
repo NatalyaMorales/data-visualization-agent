@@ -1,0 +1,186 @@
+[
+  {
+    "tipo_grafico": "Barras",
+    "tipo_canonico": "barras",
+    "columnas": "Kills",
+    "columnas_lista": [
+      "Kills"
+    ],
+    "justificacion": "Variable discreta detectada.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Barras",
+    "tipo_canonico": "barras",
+    "columnas": "Deaths",
+    "columnas_lista": [
+      "Deaths"
+    ],
+    "justificacion": "Variable discreta detectada.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Barras",
+    "tipo_canonico": "barras",
+    "columnas": "Asistencias",
+    "columnas_lista": [
+      "Asistencias"
+    ],
+    "justificacion": "Variable discreta detectada.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Barras",
+    "tipo_canonico": "barras",
+    "columnas": "Jugador",
+    "columnas_lista": [
+      "Jugador"
+    ],
+    "justificacion": "Variable categÃ³rica detectada (pocas categorÃ­as).",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Barras",
+    "tipo_canonico": "barras",
+    "columnas": "Mapa",
+    "columnas_lista": [
+      "Mapa"
+    ],
+    "justificacion": "Variable categÃ³rica detectada (pocas categorÃ­as).",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Barras",
+    "tipo_canonico": "barras",
+    "columnas": "Arma",
+    "columnas_lista": [
+      "Arma"
+    ],
+    "justificacion": "Variable categÃ³rica detectada (pocas categorÃ­as).",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Barras",
+    "tipo_canonico": "barras",
+    "columnas": "Secci�n",
+    "columnas_lista": [
+      "Secci�n"
+    ],
+    "justificacion": "Variable categÃ³rica detectada (pocas categorÃ­as).",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Tarjeta (KPI)",
+    "tipo_canonico": "kpi",
+    "columnas": "ACS",
+    "columnas_lista": [
+      "ACS"
+    ],
+    "justificacion": "Indicador clave (KPI) preferido por la audiencia ejecutiva.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Tarjeta (KPI)",
+    "tipo_canonico": "kpi",
+    "columnas": "Kills",
+    "columnas_lista": [
+      "Kills"
+    ],
+    "justificacion": "Indicador clave (KPI) preferido por la audiencia ejecutiva.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Tarjeta (KPI)",
+    "tipo_canonico": "kpi",
+    "columnas": "Deaths",
+    "columnas_lista": [
+      "Deaths"
+    ],
+    "justificacion": "Indicador clave (KPI) preferido por la audiencia ejecutiva.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Tarjeta (KPI)",
+    "tipo_canonico": "kpi",
+    "columnas": "Asistencias",
+    "columnas_lista": [
+      "Asistencias"
+    ],
+    "justificacion": "Indicador clave (KPI) preferido por la audiencia ejecutiva.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Gráfico de Pastel",
+    "tipo_canonico": "pastel",
+    "columnas": "Jugador",
+    "columnas_lista": [
+      "Jugador"
+    ],
+    "justificacion": "Proporciones simples para audiencia ejecutiva.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Gráfico de Pastel",
+    "tipo_canonico": "pastel",
+    "columnas": "Arma",
+    "columnas_lista": [
+      "Arma"
+    ],
+    "justificacion": "Proporciones simples para audiencia ejecutiva.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Gráfico de Pastel",
+    "tipo_canonico": "pastel",
+    "columnas": "Secci�n",
+    "columnas_lista": [
+      "Secci�n"
+    ],
+    "justificacion": "Proporciones simples para audiencia ejecutiva.",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Líneas",
+    "tipo_canonico": "lineas",
+    "columnas": "Fecha, ACS",
+    "columnas_lista": [
+      "Fecha",
+      "ACS"
+    ],
+    "justificacion": "EvoluciÃ³n en el tiempo (serie temporal continua).",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Líneas",
+    "tipo_canonico": "lineas",
+    "columnas": "Fecha, Kills",
+    "columnas_lista": [
+      "Fecha",
+      "Kills"
+    ],
+    "justificacion": "EvoluciÃ³n en el tiempo (serie temporal discreta).",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Líneas",
+    "tipo_canonico": "lineas",
+    "columnas": "Fecha, Deaths",
+    "columnas_lista": [
+      "Fecha",
+      "Deaths"
+    ],
+    "justificacion": "EvoluciÃ³n en el tiempo (serie temporal discreta).",
+    "es_grafico": true
+  },
+  {
+    "tipo_grafico": "Líneas",
+    "tipo_canonico": "lineas",
+    "columnas": "Fecha, Asistencias",
+    "columnas_lista": [
+      "Fecha",
+      "Asistencias"
+    ],
+    "justificacion": "EvoluciÃ³n en el tiempo (serie temporal discreta).",
+    "es_grafico": true
+  }
+]
